@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="110" fill="#FFF7F2"/>
+  <!-- Hard Shadow -->
+  <rect x="76" y="76" width="380" height="380" rx="64" fill="#111111"/>
+  <!-- Front Card -->
+  <rect x="64" y="64" width="380" height="380" rx="64" fill="#D94336" stroke="#111111" stroke-width="24"/>
+  <!-- Playful Accent badge / star -->
+  <circle cx="360" cy="140" r="32" fill="#FFD447" stroke="#111111" stroke-width="12"/>
+  <!-- Big Neo-Brutalist Letter 'A' -->
+  <path d="M 256 140 L 160 360 L 210 360 L 230 310 L 282 310 L 302 360 L 352 360 Z M 256 225 L 272 272 L 240 272 Z" fill="#FFFFFF" stroke="#111111" stroke-width="16" stroke-linejoin="round"/>
+</svg>

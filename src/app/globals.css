@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+:root {
+  /* Antonius Design System - Base Tokens */
+  --color-canvas: #FFF7F2;
+  --color-surface: #FFFFFF;
+  --color-ink: #111111;
+  --color-muted: #6F6A67;
+
+  /* Primary */
+  --color-red: #D94336;
+  --color-red-dark: #B83228;
+
+  /* Accents */
+  --color-yellow: #FFD447;
+  --color-blue: #70C5E8;
+  --color-green: #A8E063;
+  --color-purple: #A98BE8;
+
+  /* Semantic */
+  --color-success: #2E9B68;
+  --color-warning: #C79500;
+  --color-error: #C7372F;
+  --color-info: #3B82A8;
+
+  /* Shadows */
+  --shadow-hard-sm: 3px 3px 0 var(--color-ink);
+  --shadow-hard: 5px 5px 0 var(--color-ink);
+  --shadow-hard-lg: 7px 7px 0 var(--color-ink);
+  --shadow-hard-hero: 8px 8px 0 var(--color-ink);
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-default: 16px;
+  --radius-lg: 20px;
+  --radius-hero: 24px;
+}
+
+@theme {
+  --color-canvas: #FFF7F2;
+  --color-surface: #FFFFFF;
+  --color-ink: #111111;
+  --color-muted: #6F6A67;
+
+  --color-brand-red: #D94336;
+  --color-brand-red-dark: #B83228;
+
+  --color-accent-yellow: #FFD447;
+  --color-accent-blue: #70C5E8;
+  --color-accent-green: #A8E063;
+  --color-accent-purple: #A98BE8;
+
+  --color-brand-success: #2E9B68;
+  --color-brand-warning: #C79500;
+  --color-brand-error: #C7372F;
+  --color-brand-info: #3B82A8;
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Neo-Brutalist Utility Classes */
+.border-ink {
+  border-color: #111111 !important;
+}
+
+.border-3 {
+  border-width: 3px;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.shadow-hard-sm {
+  box-shadow: 3px 3px 0 #111111;
+}
+
+.shadow-hard {
+  box-shadow: 5px 5px 0 #111111;
+}
+
+.shadow-hard-lg {
+  box-shadow: 7px 7px 0 #111111;
+}
+
+.shadow-hard-hero {
+  box-shadow: 8px 8px 0 #111111;
+}
+
+/* Interactive Neo-Brutalist Button Movement */
+.btn-tactile {
+  transition: transform 120ms cubic-bezier(0.2, 0, 0, 1), box-shadow 120ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.btn-tactile:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+}
+
+.btn-tactile:active:not(:disabled) {
+  transform: translate(3px, 3px) !important;
+  box-shadow: 1px 1px 0 #111111 !important;
+}
+
+.btn-tactile-hero:active:not(:disabled) {
+  transform: translate(4px, 4px) !important;
+  box-shadow: 2px 2px 0 #111111 !important;
+}
+
+/* Safe Area Insets for Mobile PWA */
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.bottom-nav-safe {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 76px);
+}
+
+/* Halftone / Dot pattern background for subtle hero editorial feel */
+.bg-dots {
+  background-image: radial-gradient(#111111 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

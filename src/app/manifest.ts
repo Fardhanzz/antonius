@@ -1,0 +1,33 @@
+import { MetadataRoute } from 'next';
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: 'Antonius — Asisten Pemecah Soal AI',
+    short_name: 'Antonius',
+    description: 'Asisten Belajar & Pemecah Soal AI Mobile-First Neo-Brutalist',
+    start_url: '/',
+    display: 'standalone',
+    orientation: 'portrait',
+    background_color: '#FFF7F2',
+    theme_color: '#D94336',
+    icons: [
+      {
+        src: '/icons/antonius-favicon.png',
+        sizes: '1024x1024',
+        type: 'image/png',
+        purpose: 'any',
+      },
+      {
+        src: '/icons/antonius-favicon.png',
+        sizes: '1024x1024',
+        type: 'image/png',
+        purpose: 'maskable',
+      },
+      {
+        src: '/icon.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+    ],
+  };
+}
